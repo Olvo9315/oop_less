@@ -7,6 +7,7 @@ public class Animal {
     protected List<String> vaccinations;
     protected String illness;
     protected String owner;
+    protected String type;
 
     
     public Animal(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
@@ -15,6 +16,7 @@ public class Animal {
         this.vaccinations = vaccinations;
         this.illness = illness;
         this.owner = owner;
+        this.type = getClass().getSimpleName();
     }
 
 
@@ -65,17 +67,7 @@ public class Animal {
         sleep();
     }
 
-    public void toGo() {
-        System.out.println(getClass().getSimpleName() + " " + getName() + " can walk");
-    }
 
-    public void fly() {
-        System.out.println(getClass().getSimpleName() + " " + getName() + " can fly");
-    }
-
-    public void swim() {
-        System.out.println(getClass().getSimpleName() + " " + getName() + " can swim");
-    }
 
     @Override
     public String toString() {
